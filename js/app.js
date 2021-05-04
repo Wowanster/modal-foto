@@ -2,13 +2,13 @@ const modal__foto=document.querySelector(".modal__foto");
 const modal=document.querySelector(".modal");
 const clos=document.querySelector(".modal__close");
 const overlay=document.querySelector(".modal__overlay");
-const image=document.querySelector('.image');
+const image=document.querySelector('.ims');
 const jsClose=document.querySelectorAll('.js--close');
 const add=document.querySelector('.add');
 
 image.addEventListener('click',function(){
   if(event.target.className=='image__foto'){
-    modal.classList.add('modal--active');
+    modal.classList.add('is-active');
     modal__foto.src=event.target.src;
     modal__foto.alt=event.target.src;
   }
@@ -16,7 +16,7 @@ image.addEventListener('click',function(){
 
 for(let jsExit of jsClose){
   jsExit.addEventListener('click', function(){
-    modal.classList.remove('modal--active');
+    modal.classList.remove('is-active');
   })
 }
 
@@ -38,21 +38,26 @@ let i=0;
 let steep=3;
 add.addEventListener('click',function(){
 
+  let div=document.createElement('div');
+  div.className='columns is-centered';
+  image.append(div);
+
 let por=massiv.slice(i,steep);
 if(por.length==3){
 
   for(let j=0; j<por.length;j++){
  
-  let div=document.createElement('div');
-  div.className='image__item';
+  
+  let column=document.createElement('div');
+  column.className='column is-4-tablet is-4-desktop is-4-widescreen';
 
   let img=document.createElement('img');
    img.src=por[j].src;
    img.alt=por[j].alt;
    img.className='image__foto';
-
-   image.append(div);
-   div.append(img);
+  
+   div.append(column);
+   column.append(img);
    }
   }
 else{

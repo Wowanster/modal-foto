@@ -5,64 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="bulma/css/bulma.css" type="text/css">
     <title>Modal</title>
 </head>
 <body>
 
-<section class="section">
-    <div class="wrapper">
-        <div class="image">
-            <div class="image__item">
-                <img src="images/887.jpg" alt="img" class="image__foto">
-            </div>
-            <div class="image__item">
-                <img src="images/bert.jpg" alt="img" class="image__foto" >
-            </div>
-            <div class="image__item">
-                <img src="images/gory-tsvety-leto-priroda.jpg" alt="img" class="image__foto">
-            </div>
-            <div class="image__item">
-                <img src="images/images.jpg" alt="img" class="image__foto">
-            </div>
-            <div class="image__item">
-                <img src="images/kartinki-krasivye.jpg" alt="img" class="image__foto">
-            </div>
-            <div class="image__item">
-                <img src="images/priroda (1).jpg" alt="img" class="image__foto" >
-            </div>
-            <div class="image__item">
-                <img src="images/Priroda.jpg" alt="img" class="image__foto">
-            </div>
-            <div class="image__item">
-                <img src="images/seminar.jpg" alt="img" class="image__foto" >
-            </div>
-            <div class="image__item">
-                <img src="images/unnamed.jpg" alt="img" class="image__foto" >
-            </div>
-        </div>
+    <section class="hero is-primary is-fullheight">
+        <div class="hero-body">
+          <div class="container ims">             
+              <div class="columns is-centered">
+                  <div class="column is-4-tablet is-4-desktop is-4-widescreen image__item">
+                    <img src="images/887.jpg" alt="img" class="image__foto">
+                  </div>
+                  <div class="column is-4-tablet is-4-desktop is-4-widescreen image__item">
+                    <img src="images/bert.jpg" alt="img" class="image__foto">
+                </div>
+                <div class="column is-4-tablet is-4-desktop is-4-widescreen image__item">
+                    <img src="images/gory-tsvety-leto-priroda.jpg" alt="img" class="image__foto">
+                </div>
+              </div>
 
-            <button class="add">Add Foto</button>
-    </div>
-</section>
+              <div class="columns is-centered">
+                <div class="column is-4-tablet is-4-desktop is-4-widescreen">
+                    <img src="images/images.jpg" alt="img" class="image__foto">
+                </div>
+                <div class="column is-4-tablet is-4-desktop is-4-widescreen">
+                    <img src="images/kartinki-krasivye.jpg" alt="img" class="image__foto">
+                </div>
+                <div class="column is-4-tablet is-4-desktop is-4-widescreen">
+                    <img src="images/priroda (1).jpg" alt="img" class="image__foto" >
+                </div>
+              </div>
+
+              <div class="columns is-centered">
+                <div class="column is-4-tablet is-4-desktop is-4-widescreen">
+                     <img src="images/Priroda.jpg" alt="img" class="image__foto">
+                </div>
+                <div class="column is-4-tablet is-4-desktop is-4-widescreen">
+                    <img src="images/seminar.jpg" alt="img" class="image__foto" >
+                </div>
+                <div class="column is-4-tablet is-4-desktop is-4-widescreen">
+                    <img src="images/unnamed.jpg" alt="img" class="image__foto">
+                </div>
+              </div>
+          </div>
+
+          <button class="add">Add Foto</button>
+        </div>
+      </section>
+
+
 
 
     
 
 
-
-<div class="modal">
-    <div class="modal__overlay js--close"></div>  
-      <div class="modal__body">
-        <div class="modal__content">
-            <button class="modal__close close js--close">
-                <img src="images/close.svg" alt='close' class="close__icon">
-            </button>
-            <div class="modal__img"> 
-            <img src="images/887.jpg" alt="foto" class="modal__foto">
-            </div>                
-        </div>
+<div class="modal ">
+    <div class="modal-background js--close"></div>
+    <div class="modal-content ">
+      <p class="image is-4by3">
+        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="12" class="modal__foto">
+      </p>
     </div>
-</div>
+    <button class="modal-close is-large js--close" aria-label="close"></button>
+  </div>
 
 
 
