@@ -10,68 +10,89 @@
 </head>
 <body>
 
-    <section class="hero is-primary is-fullheight">
-        <div class="hero-body">
-          <div class="container ims">             
-              <div class="columns is-centered">
-                  <div class="column is-4-tablet is-4-desktop is-4-widescreen image__item">
-                    <img src="images/887.jpg" alt="img" class="image__foto">
-                  </div>
-                  <div class="column is-4-tablet is-4-desktop is-4-widescreen image__item">
-                    <img src="images/bert.jpg" alt="img" class="image__foto">
-                </div>
-                <div class="column is-4-tablet is-4-desktop is-4-widescreen image__item">
-                    <img src="images/gory-tsvety-leto-priroda.jpg" alt="img" class="image__foto">
-                </div>
-              </div>
+  <section class="section">
+    <div class="container">
+      <h1 class="title"> Image Section</h1>
+      <h2 class="subtitle">
+        A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading.
+      </h2>
 
-              <div class="columns is-centered">
-                <div class="column is-4-tablet is-4-desktop is-4-widescreen">
-                    <img src="images/images.jpg" alt="img" class="image__foto">
-                </div>
-                <div class="column is-4-tablet is-4-desktop is-4-widescreen">
-                    <img src="images/kartinki-krasivye.jpg" alt="img" class="image__foto">
-                </div>
-                <div class="column is-4-tablet is-4-desktop is-4-widescreen">
-                    <img src="images/priroda (1).jpg" alt="img" class="image__foto" >
-                </div>
-              </div>
-
-              <div class="columns is-centered">
-                <div class="column is-4-tablet is-4-desktop is-4-widescreen">
-                     <img src="images/Priroda.jpg" alt="img" class="image__foto">
-                </div>
-                <div class="column is-4-tablet is-4-desktop is-4-widescreen">
-                    <img src="images/seminar.jpg" alt="img" class="image__foto" >
-                </div>
-                <div class="column is-4-tablet is-4-desktop is-4-widescreen">
-                    <img src="images/unnamed.jpg" alt="img" class="image__foto">
-                </div>
-              </div>
+      <div class="columns is-multiline js-gallery">
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/887.jpg" alt="Placeholder image">
+              </figure>
+            </div>
           </div>
-
-          <button class="add">Add Foto</button>
         </div>
-      </section>
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/bert.jpg" alt="Placeholder image">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/gory-tsvety-leto-priroda.jpg" alt="Placeholder image">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/images.jpg" alt="Placeholder image">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/kartinki-krasivye.jpg" alt="Placeholder image">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/Priroda.jpg" alt="Placeholder image">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <div class="buttons is-centered">
+            <button class="button is-primary js-load-more-action">Load more</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-
-
-
-    
-
-
-<div class="modal ">
-    <div class="modal-background js--close"></div>
-    <div class="modal-content ">
+  <div class="modal js-modal">
+    <div class="modal-background js-close"></div>
+    <div class="modal-content">
       <p class="image is-4by3">
-        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="12" class="modal__foto">
+        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="12">
       </p>
     </div>
-    <button class="modal-close is-large js--close" aria-label="close"></button>
+    <button class="modal-close is-large js-close" aria-label="close"></button>
   </div>
 
-
-
-    <script src="js/app.js" type="text/javascript"></script>
+  <script src="js/app.js" type="text/javascript"></script>
 </body>
 </html>
