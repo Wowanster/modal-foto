@@ -1,27 +1,23 @@
-const modal__foto=document.querySelector(".modal__foto");
+const modalFoto=document.querySelector(".modal__foto");
 const modal=document.querySelector(".modal");
-const clos=document.querySelector(".modal__close");
-const overlay=document.querySelector(".modal__overlay");
-const image=document.querySelector('.ims');
-const jsClose=document.querySelectorAll('.js--close');
-const add=document.querySelector('.add');
+const image=document.querySelector('.js-gallery');
+const addFoto=document.querySelector('.js-load');
 
-image.addEventListener('click',function(){
-  if(event.target.className=='image__foto'){
+image.addEventListener('click',function(event){
+  if(event.target.tagName==='IMG'){
     modal.classList.add('is-active');
-    modal__foto.src=event.target.src;
-    modal__foto.alt=event.target.src;
+    modalFoto.setAttribute('src', event.target.src)
+    modalFoto.setAttribute('alt', event.target.alt)
   }
 })
 
-for(let jsExit of jsClose){
-  jsExit.addEventListener('click', function(){
-    modal.classList.remove('is-active');
-  })
-}
+modal.addEventListener('click',function(event){
+  if(event.target.classList.contains('js--close')){
+    modal.classList.remove('is-active');  
+  }
+})
 
-
-let massiv=[
+let fotoLoader=[
   {src:"images/add/35663.jpg", alt:"foto0"},
   {src:"images/add/tree-736885.jpg", alt:"foto1"},
   {src:"images/add/122134.jpg", alt:"foto2"},
@@ -31,43 +27,99 @@ let massiv=[
   {src:"images/add/images34.jpg", alt:"foto6"},
   {src:"images/add/imags.jpg", alt:"foto7"},
   {src:"images/add/maxresdefault.jpg", alt:"foto8"},
-  {src:"images/add/maxresdefault.jpg", alt:"foto9"},
 ];
 
-let i=0;
-let steep=3;
-add.addEventListener('click',function(){
-
-  let div=document.createElement('div');
-  div.className='columns is-centered';
-  image.append(div);
-
-let por=massiv.slice(i,steep);
-if(por.length==3){
-
-  for(let j=0; j<por.length;j++){
- 
-  
-  let column=document.createElement('div');
-  column.className='column is-4-tablet is-4-desktop is-4-widescreen';
-
-  let img=document.createElement('img');
-   img.src=por[j].src;
-   img.alt=por[j].alt;
-   img.className='image__foto';
-  
-   div.append(column);
-   column.append(img);
-   }
-  }
-else{
-  add.classList.add('add--exit');
+function cardNew({src,alt}){
+  return `
+  <div class="column is-4">
+     <div class="card">
+         <div class="card-image">
+             <figure class="image is-4by3">
+                <img src=${src} alt=${alt}>
+              </figure>
+          </div>
+        </div>
+      </div>
+  `;
 }
 
-  i=i+3;
-  steep=steep+3;
-  
+
+let step=3;
+let cont=0;
+let from=0;
+let to=3;
+addFoto.addEventListener('click',function(){
+if(cont<fotoLoader.length){
+  let fotoLoad=fotoLoader
+  .slice(from,to)
+  .map((image) => cardNew(image))
+  .join(' ');
+  console.log(fotoLoad);
+
+image.insertAdjacentHTML('beforeend', fotoLoad);
+
+from=from+step;
+to=to+step;
+cont=cont+step;
+}
+
+if(cont>=fotoLoader.length){
+  addFoto.classList.add('is-hidden');
+}
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let i=0;
+// let steep=3;
+// add.addEventListener('click',function(){
+
+//   let div=document.createElement('div');
+//   div.className='columns is-centered';
+//   image.append(div);
+
+// let por=massiv.slice(i,steep);
+// if(por.length===3){
+
+//   for(let j=0; j<por.length;j++){
+ 
+  
+//   let column=document.createElement('div');
+//   column.className='column is-4-tablet is-4-desktop is-4-widescreen';
+
+//   let img=document.createElement('img');
+//    img.src=por[j].src;
+//    img.alt=por[j].alt;
+//    img.className='image__foto';
+  
+//    div.append(column);
+//    column.append(img);
+//    }
+//   }
+
+// if(por.length!==3){
+//   add.classList.add('add--exit');
+// }
+
+//   i=i+3;
+//   steep=steep+3;
+  
+// })
 
 
 
